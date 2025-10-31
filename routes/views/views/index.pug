@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 Find places to work with wifi near you!
+  each place in places
+    .place
+      h3 #{place.name}
+      span.distance #{place.distance}
+      p #{place.address}
+      ul
+        each facility in place.facilities
+          li= facility
